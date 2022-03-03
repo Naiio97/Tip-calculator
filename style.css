@@ -154,11 +154,11 @@ p {
 }
 
 #tips-btns button:hover {
-  background: #27b89e;
+  background: #b8dee2;
 }
 
-#tips-btns button:hover:active {
-  background: #8fe4d8;
+#tips-btns .active {
+  background: #27b89e;
 }
 
 #tips-btns input {

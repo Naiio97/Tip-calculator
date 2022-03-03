@@ -113,11 +113,12 @@ p{
         font-weight: 700;
         font-family: "Space Mono", monospace;
         &:hover {
-            background: $second-color;
-            &:active {
-                background: rgba(143, 228, 216, 1);
-            }
+            background: $hover-color;
         }
+    }
+
+    .active {
+        background: $second-color
     }
 
     input {
