@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+@import "variables";
+@import "mixins";
+
+//Vypnutí šipek v inputu
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+ margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+-moz-appearance: textfield;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: hsl(185, 41%, 84%)
+}
+
+
+main{
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Space Mono", monospace;
+}
+
+#container {
+    height: 280px;
+    width: 520PX;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 1;
+    background-color: white;
+    padding: 20px; 
+    
+}
+
+form {
+    grid-column: 1;   
+}
+
+p{
+    @include formPar;
+}
+
+    #bill-input {
+        @include myInput;
+        background: url(./images/icon-dollar.svg) no-repeat;
+        background-size: 3%;
+        background-position: 10px ;
+        background-color: $third-color;
+        margin-bottom: 15px;
+    }
+
+
+.text-tips {
+    @include formPar;
+}
+
+
+#tips-btns {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 2;
+    margin-bottom: 15px;
+
+    #btn5 {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    #btn10 {
+        grid-row: 1;
+        grid-column: 2;
+    }
+    #btn15 {
+        grid-row: 1;
+        grid-column: 3;
+    }
+    #btn25 {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    #btn50 {
+        grid-row: 2;
+        grid-column: 2;
+    }
+    #tip-input{
+        grid-row: 2;
+        grid-column: 3;
+    }
+
+    button {
+        width: 4rem;
+        height: 1.9rem;
+        margin: 0px -25px 10px 0;
+        background: $main-color;
+        border: none;
+        color: $main-text-color;
+        border-radius: 3px;
+        font-weight: 700;
+        font-family: "Space Mono", monospace;
+        &:hover {
+            background: $second-color;
+            &:active {
+                background: rgba(143, 228, 216, 1);
+            }
+        }
+    }
+
+    input {
+        width: 4rem;
+        height: 1.9rem; 
+        text-align: center;
+        color: $second-text-color;
+        font-weight: 700;
+        font-size: 13px;
+        font-family: "Space Mono", monospace;
+        border: none;
+        border-radius: 3px;
+        background-color: $third-color;
+        &:focus {
+            outline: none !important;
+            border: 2px solid $second-color;
+            
+        }
+    }    
+}
+
+    .num-text {
+        display: flex;
+        p{
+            @include formPar;
+        }
+        span {
+            color: red;
+            font-size: 9px;
+            text-align: right;
+            margin-left: 50px;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+    }
+    
+    #people-input {
+        @include myInput;
+        background: url(./images/icon-dollar.svg) no-repeat;
+        background-size: 3%;
+        background-position: 10px ;
+        background-color: $third-color;
+        margin-bottom: 15px;
+        
+    }
+
+#container-info{
+    border-radius: 10px;
+    grid-column: 2;
+    background: $main-color;
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 1;
+    padding: 20px; 
+
+    #tip-txt{
+    grid-column: 1;
+    grid-row: 1;
+    color: $main-text-color;
+    font-size: 10px;
+    font-weight: 500;
+        span {
+            color: $second-text-color;
+            font-size: 9px;
+        }
+    }
+
+    #tip-amount {
+        grid-column: 2;
+        grid-row: 1;
+        color: $second-color;
+        font-size: 20px;
+        font-weight: 700;
+        margin-left: 20px;
+        margin-right: -20px;
+    }
+
+    #total-txt {
+        grid-column: 1;
+        grid-row: 2;
+        color: $main-text-color;
+        font-size: 10px;
+        font-weight: 500;
+            span {
+                color: $second-text-color;
+                font-size: 9px;
+        }
+    }
+
+    #total-price {
+        grid-column: 2;
+        grid-row: 2;
+        color: $second-color;
+        font-size: 20px;
+        font-weight: 700;
+        margin-left: 20px;
+        margin-right: -20px;
+    }
+
+    button {
+        font-family: "Space Mono", monospace;
+        grid-column: 1/3;
+        grid-row: 3;
+        width: 90%;
+        height: 1.5rem;
+        justify-self: center;
+        align-self:flex-end;
+        background: $second-color;
+        border: none;
+        border-radius: 4px;
+        font-size: 13px;
+        &:disabled {
+            filter: opacity(0.3);
+            cursor: unset;
+          }
+
+        &:hover:enabled {
+            background-color: $hover-color;
+            color: $second-text-color;
+          }  
+    }
+}
+
+

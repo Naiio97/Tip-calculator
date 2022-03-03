@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tip calculator</title>
+</head>
+<body>
+    <main>
+            <div id="container">
+                <form>
+                        <p>Bill</p>
+                        <input  
+                            type="number"
+                            id="bill-input"
+                            name="bill-input"
+                            placeholder="0"
+                        >
+                    
+                    <p class="text-tips">Select Tip %</p>
+                    <div id="tips-btns">
+                        <button id="btn5"> 5% </button>
+                        <button id="btn10"> 10% </button>
+                        <button id="btn15"> 15% </button>
+                        <button id="btn25"> 25% </button>
+                        <button id="btn50"> 50% </button>
+                        <input
+                            type="number",
+                            id="tip-input",
+                            name="custom",
+                            placeholder="Custom"
+                        />
+                    </div>
+                        <div class="num-text">
+                            <p>Number of people</p>
+                            <span class="error hidden">Can't be zero</span>
+                        </div>
+                        <input
+                            type="number"
+                            id="people-input"
+                            placeholder="0"
+                        />
+        
+                </form>
+            <div id="container-info">
+                
+                    <p id="tip-txt">Tip amount <br />
+                        <span>/ person</span> 
+                    </p>
+                    <p id="tip-amount">$0,00</p>  
+                
+               
+                
+                    <p id="total-txt">Total <br />
+                        <span>/ person</span>
+                    </p>
+                    <p ID="total-price">$0,00</p>
+
+                    <button id="reset">Reset</button>
+               
+            
+
+                    
+            </div>
+            </div>
+        </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
