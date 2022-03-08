@@ -5,7 +5,8 @@ const btnTip = document.querySelectorAll('#tips-btns button')
 const tipInput = document.querySelector('#tip-input')
 const tipAm = document.querySelector('#tip-amount')
 const totalPr = document.querySelector('#total-price')
-const error = document.querySelector('.error')
+const billError = document.querySelector('.bill-error')
+const peopleError = document.querySelector('.people-error')
 const reset = document.querySelector('#reset')
 reset.disabled =true
 
@@ -19,6 +20,13 @@ let tip = 0
 inputBill.addEventListener('keyup', (e) => {
     bill = inputBill.value
     reset.disabled = false;
+    if (bill === "" || bill === "0") {
+        billError.classList.remove('hidden')
+        inputBill.style.border = "2px solid red"
+    } else {
+        billError.classList.add('hidden')
+        inputBill.style.border = ""
+    }
     CalTotal()
 })
 
@@ -27,10 +35,10 @@ inputPeople.addEventListener('keyup', (e) => {
     peoples = inputPeople.value
     reset.disabled = false;
     if (peoples === "" || peoples === "0") {
-        error.classList.remove('hidden')
+        peopleError.classList.remove('hidden')
         inputPeople.style.border = "2px solid red"
     } else {
-        error.classList.add('hidden')
+        peopleError.classList.add('hidden')
         inputPeople.style.border = ""
     }
     CalTotal()
@@ -40,6 +48,7 @@ inputPeople.addEventListener('keyup', (e) => {
 for (const button of btnTip ){
     button.addEventListener('click', (e) => {
         e.preventDefault()
+        reset.disabled = false;
         let btn = Array.from(btnTip)
         if(button === btn[0]){
             tip = bill / peoples * 0.05         
@@ -58,12 +67,12 @@ for (const button of btnTip ){
 
 //Input tip
 tipInput.addEventListener('keyup', (e) => {
+    reset.disabled = false;
     if(tipInput.value) {
         tip = tipInput.value / 100 * bill
     }
     CalTotal()
 })
-
 
 //Funkce na vypisování výsledku
 const CalTotal = () => {
@@ -82,7 +91,11 @@ reset.addEventListener('click', (e) => {
     CalTotal ()
     inputBill.value = 0
     inputPeople.value = 0
+    tipInput.value = 0
     totalPr.innerHTML = "$0.00"
     tipAm.innerHTML = "$0.00"
     reset.disabled = true
+    billError.classList.add('hidden')
+    peopleError.classList.add('hidden')
+    inputPeople.style.border = ""
 })

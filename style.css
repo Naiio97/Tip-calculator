@@ -55,10 +55,27 @@ form {
   grid-column: 1;
 }
 
-p {
+.bill-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bill-text p {
   font-size: 9px;
   color: #566668;
   margin-bottom: 5px;
+}
+
+.bill-text .bill-span {
+  color: red;
+  font-size: 9px;
+  text-align: right;
+  margin-left: 115px;
+}
+
+.bill-text .hidden {
+  visibility: hidden;
 }
 
 #bill-input {
@@ -174,31 +191,26 @@ p {
   background-color: #f0f6f9;
 }
 
-#tips-btns input:focus {
-  outline: none !important;
-  border: 2px solid #27b89e;
-}
-
-.num-text {
+.people-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.num-text p {
+.people-text p {
   font-size: 9px;
   color: #566668;
   margin-bottom: 5px;
 }
 
-.num-text span {
+.people-text .people-span {
   color: red;
   font-size: 9px;
   text-align: right;
   margin-left: 50px;
 }
 
-.num-text .hidden {
+.people-text .hidden {
   visibility: hidden;
 }
 

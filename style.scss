@@ -52,8 +52,21 @@ form {
     grid-column: 1;   
 }
 
-p{
-    @include formPar;
+.bill-text {
+    display: flex;
+
+    p{
+        @include formPar;
+    }
+    .bill-span {
+        color: red;
+        font-size: 9px;
+        text-align: right;
+        margin-left: 115px;
+    }
+    .hidden {
+        visibility: hidden;
+    }
 }
 
     #bill-input {
@@ -135,12 +148,12 @@ p{
     }    
 }
 
-    .num-text {
+    .people-text {
         display: flex;
         p{
             @include formPar;
         }
-        span {
+        .people-span {
             color: red;
             font-size: 9px;
             text-align: right;

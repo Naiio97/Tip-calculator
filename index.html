@@ -13,6 +13,7 @@
                 <form>
                         <div class="bill-text">
                             <p>Bill</p>
+                            <span class="bill-error bill-span hidden">Can't be zero</span>
                         </div>
                        
                         <input  
@@ -24,11 +25,11 @@
                     
                     <p class="text-tips">Select Tip %</p>
                     <div id="tips-btns">
-                        <button id="btn5" class="active"> 5% </button>
-                        <button id="btn10" class="active"> 10% </button>
-                        <button id="btn15" class="active"> 15% </button>
-                        <button id="btn25" class="active"> 25% </button>
-                        <button id="btn50" class="active"> 50% </button>
+                        <button id="btn5" > 5% </button>
+                        <button id="btn10"> 10% </button>
+                        <button id="btn15"> 15% </button>
+                        <button id="btn25"> 25% </button>
+                        <button id="btn50"> 50% </button>
                         <input
                             type="number",
                             id="tip-input",
@@ -36,13 +37,14 @@
                             placeholder="Custom"
                         />
                     </div>
-                        <div class="num-text">
+                        <div class="people-text">
                             <p>Number of people</p>
-                            <span class="error hidden">Can't be zero</span>
+                            <span class="people-error people-span hidden">Can't be zero</span>
                         </div>
                         <input
                             type="number"
                             id="people-input"
+                            name="people-input"
                             placeholder="0"
                         />
         
