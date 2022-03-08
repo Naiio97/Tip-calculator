@@ -132,11 +132,6 @@ p{
         border: none;
         border-radius: 3px;
         background-color: $third-color;
-        &:focus {
-            outline: none !important;
-            border: 2px solid $second-color;
-            
-        }
     }    
 }
 
