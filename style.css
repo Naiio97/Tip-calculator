@@ -179,10 +179,6 @@ form {
   background: #b8dee2;
 }
 
-#tips-btns .active {
-  background: #27b89e;
-}
-
 #tips-btns input {
   width: 4rem;
   height: 1.9rem;
@@ -387,6 +383,7 @@ form {
   form #bill-input {
     display: block;
     width: 100%;
+    height: 3rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -395,6 +392,7 @@ form {
             justify-content: center;
     margin: 0 auto;
     margin-bottom: 20px;
+    font-size: 17px;
   }
   form #tips-btns {
     display: -ms-grid;
@@ -410,6 +408,8 @@ form {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 15px;
   }
   form #tips-btns #btn5 {
     -ms-grid-row: 1;
@@ -448,28 +448,67 @@ form {
     grid-column: 2;
   }
   form #tips-btns button {
-    width: 8rem;
-    height: 2.4rem;
-    margin: 0px 10px 10px 0;
+    width: 11rem;
+    height: 3rem;
+    margin: 0px 5px 10px 5px;
+    font-size: 17px;
+  }
+  form #tips-btns input {
+    width: 11rem;
+    height: 3rem;
+    margin: 0 0 10px 5px;
+    font-size: 17px;
   }
   form #people-input {
     display: block;
-    width: 300px;
+    width: 100%;
+    height: 3rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 0 10px;
     margin-bottom: 20px;
+    font-size: 17px;
   }
   #container-info {
     -ms-grid-column: 1;
     grid-column: 1;
     -ms-grid-row: 2;
     grid-row: 2;
-    width: 90%;
+    width: 100%;
+    height: 170px;
+    padding: 15px;
+  }
+  #container-info #tip-txt {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  #container-info #tip-txt span {
+    font-size: 10px;
+  }
+  #container-info #tip-amount {
+    text-align: right;
+    margin: 0;
+  }
+  #container-info #total-txt {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  #container-info #total-txt span {
+    font-size: 10px;
+  }
+  #container-info #total-price {
+    text-align: right;
+    margin: 0;
+  }
+  #container-info button {
+    width: 100%;
+    height: 2.6rem;
+    font-size: 17px;
   }
 }
 /*# sourceMappingURL=style.css.map */
